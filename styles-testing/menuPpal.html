@@ -1,0 +1,21 @@
+<?php
+	if(!isset($SESSION['status']) || $SESSION['status'] == FALSE){
+		header("Location:login.html");
+	}
+?>
+<!DOCTYPE HTML>
+<html>
+<head>
+	<title>Menu Principal</title>
+	<link rel="stylesheet" type="text/css" href="stylesheet.css">
+</head>
+<body>
+<h1>Menu Principal</h1>
+<ul>
+	<li><a href="userForm.html">Formulario de usuarios</a></li>
+	<li><a href="beltForm.html">Formulario de cinturones</a></li>
+	<li><a href="activityForm.html">Formulario de actividades</a></li>
+	<li><a href="rankForm.html">Formulario de rangos</a></li>
+</ul>
+</body>
+<html>
