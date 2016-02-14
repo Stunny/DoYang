@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Formulario de usuarios</title>
+	<link rel="stylesheet" type="text/css" href="stylesheet.css">
+</head>
+<body>
+<div id="principal">
+	<h1>Usuarios</h1>
+	<form action="register_user.php" method="POST" name="userForm">
+	<input type="hidden"  name="id_user">
+	<div id="lista">
+	<ul>
+		<li>Nombre Completo:</li>
+		<li><input type="text" name="user_name"></li>
+		<li>Password:</li>
+		<li><input type="password"  name="user_password"></li>
+		<li>Edad:</li>
+		<li><input type="text" name="user_age"></li>
+		<li>Rango:</li>
+			<li><select name="id_rank">
+				<option value="1">test</option>
+			</select>
+		</li>
+		<li>Cintur&oacute;n:</li>
+		<li><select name="id_belt">
+			<option value="1">test</option>
+		</select>
+		</li>
+		<li>Actividades:</li>
+			</li><select name="id_activity">
+				<option value=1>TKD</option>
+			</select></li>
+		<li>Ruta de foto de perfil:</li>
+		<li><input type="text" name="userPhotoRoute"></li>
+		<li><input type="submit" name="Submit"></li>
+	</ul>
+	</div>
+	</form>
+</body>
+</html>

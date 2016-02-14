@@ -1,0 +1,52 @@
+body {
+	background-color: #D8D8D8;
+}
+
+ul {
+	list-style-type: none;
+}
+#loginTitle {
+	width: 100px;
+	font-family: "Gill Sans MT", sans-serif;
+	margin-left: 33%;
+}
+#login {
+	float: left;
+	position: relative;
+	margin-left: 35%;
+	padding: 20px;
+	border-radius: 25px;
+	width: 400px;
+	height: auto;
+	background-color: white;
+	border-top: 5px solid #ff656c;
+}
+#logoDoyang{
+	float: left;
+	position: relative;
+	margin-left: 70px;
+	padding: 20px;
+	width: 210px;
+	height: 210px;
+}
+#formlogin {
+	float: left;
+	left: 11%;
+	position: relative;
+}
+.loginblock input{
+		height: 42px;
+		width: 96%;
+		margin-bottom: 20px;
+}
+.loginblock input#submit{
+	width: 100%;
+}
+#lista {
+	float: right;
+	position: relative;
+	width: 500px;
+	background-color: red;
+	margin-left:auto;
+	margin-right:auto;
+}
