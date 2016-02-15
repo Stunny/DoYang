@@ -24,17 +24,59 @@
         $cat = $_GET['category'];
         switch ($cat){
           case "TKD":
+            $query =<<<SQL
+SELECT user_name
+FROM usuario
+WHERE id_activity = 0;
+SQL;
+            $list = $conn->query($query);
+            if($list->num_rows == 0){
+              printf("{"res": 0, "msg": "ERROR 404: NOT FOUND"}");
+            }else{
+              printf(json_encode($list));
+            }
             break;
           case "STH":
+            $query =<<<SQL
+SELECT user_name
+FROM usuario
+WHERE id_activity = 1;
+SQL;
+            $list = $conn->query($query);
+            if($list->num_rows == 0){
+              printf("{"res": 0, "msg": "ERROR 404: NOT FOUND"}");
+            }else{
+              printf(json_encode($list));
+            }
             break;
           case "DOS":
+            $query =<<<SQL
+SELECT user_name
+FROM usuario
+WHERE id_activity = 2;
+SQL;
+            $list = $conn->query($query);
+            if($list->num_rows == 0){
+              printf("{"res": 0, "msg": "ERROR 404: NOT FOUND"}");
+            }else{
+              printf(json_encode($list));
+            }
             break;
           default:
             printf("{"res": 0, "msg": "ERROR 400: BAD REQUEST"}");
             break;
         }
       }else{
-
+        $query =<<<SQL
+SELECT user_name
+FROM usuario;
+SQL;
+        $list = $conn->query($query);
+        if($list->num_rows == 0){
+          printf("{"res": 0, "msg": "ERROR 404: NOT FOUND"}");
+        }else{
+          printf(json_encode($list));
+        }
       }
       break;
     case "getUser":
