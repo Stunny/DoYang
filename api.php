@@ -5,7 +5,7 @@
       MÉTODOS:
       - GETUSER: SOLICITAR LA INFORMACIÓN DE UN USER.
       - GETUSERSLIST:LISTAR A TODOS LOS USUARIOS DE LA APLICACION.
-      - UPDATEINFO: MODIFICAR LA INFORMACIÓN DE UN USER.
+      - POSTUPDATEINFO: MODIFICAR LA INFORMACIÓN DE UN USER.
 
       ENTRADA(GETUSER):
       - ID
@@ -95,7 +95,7 @@ SQL;
         echo "$ans";
       }
       break;
-    case "updateInfo":
+    case "postUpdateInfo":
       $user_id = $_GET['id'];
       $user_name = $_GET['user_name'];
       $user_age = $_GET['user_age'];
