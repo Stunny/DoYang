@@ -5,11 +5,13 @@ body {
 ul {
 	list-style-type: none;
 }
+
 #loginTitle, #userTitle {
 	width: 100px;
 	font-family: "Gill Sans MT", sans-serif;
 	margin-left: 33%;
 }
+
 #login {
 	float: left;
 	position: relative;
@@ -21,6 +23,7 @@ ul {
 	background-color: white;
 	border-top: 5px solid #ff656c;
 }
+
 #logoDoyang{
 	float: left;
 	position: relative;
@@ -29,19 +32,23 @@ ul {
 	width: 210px;
 	height: 210px;
 }
+
 #formlogin {
 	float: left;
 	left: 11%;
 	position: relative;
 }
+
 .loginblock input{
 		height: 42px;
 		width: 96%;
 		margin-bottom: 20px;
 }
+
 .loginblock input#submit{
 	width: 100%;
 }
+
 #lista {
 	float: left;
 	position: relative;
@@ -50,6 +57,7 @@ ul {
 	margin-left:auto;
 	margin-right:auto;
 }
+
 #principal {
 	width: 100%;
 	height: 100%;
