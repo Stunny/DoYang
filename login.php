@@ -13,7 +13,7 @@
 <head>
 	<title>Welcome</title>
 
-	<link media="screen" type="text/css" rel="stylesheet" href="stylesheet.css" />
+	<link media="screen" type="text/css" rel="stylesheet" href=".//Styles//stylesheet.css" />
 </head>
 <body>
 	<div id="login">

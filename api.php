@@ -33,7 +33,7 @@ SQL;
             if($list->num_rows == 0){
               printf("{"res": 0, "msg": "ERROR 404: NOT FOUND"}");
             }else{
-              printf(json_encode($list));
+              printf(json_encode($list->fetch_assoc()));
             }
             break;
           case "STH":
@@ -46,7 +46,7 @@ SQL;
             if($list->num_rows == 0){
               printf("{"res": 0, "msg": "ERROR 404: NOT FOUND"}");
             }else{
-              printf(json_encode($list));
+              printf(json_encode($list->fetch_assoc()));
             }
             break;
           case "DOS":
@@ -59,7 +59,7 @@ SQL;
             if($list->num_rows == 0){
               printf("{"res": 0, "msg": "ERROR 404: NOT FOUND"}");
             }else{
-              printf(json_encode($list));
+              printf(json_encode($list->fetch_assoc()));
             }
             break;
           default:
@@ -75,7 +75,7 @@ SQL;
         if($list->num_rows == 0){
           printf("{"res": 0, "msg": "ERROR 404: NOT FOUND"}");
         }else{
-          printf(json_encode($list));
+          printf(json_encode($list->fetch_assoc()));
         }
       }
       break;
@@ -91,7 +91,7 @@ SQL;
       if($res->num_rows != 1){
         printf("{"res": 0, "msg": "Error 403: FORBIDDEN"}");
       }else{{
-        $ans = json_encode($res);
+        $ans = json_encode($res->fetch_assoc());
         echo "$ans";
       }
       break;
