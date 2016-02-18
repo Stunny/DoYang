@@ -5,7 +5,10 @@
       MÉTODOS:
       - GETUSER: SOLICITAR LA INFORMACIÓN DE UN USER.
       - GETUSERSLIST:LISTAR A TODOS LOS USUARIOS DE LA APLICACION.
-      - UPDATEINFO: MODIFICAR LA INFORMACIÓN DE UN USER.
+      - PUT -> UPDATEINFO: MODIFICAR LA INFORMACIÓN DE UN USER.
+      - PATCH ->
+      - POST ->
+      - DELETE ->
 
       ENTRADA(GETUSER):
       - ID
@@ -19,7 +22,7 @@
 
   */
   switch($method){
-    case "getUsersList":
+    case "GETusersList":
       if(isset($_GET['category'])){
         $cat = $_GET['category'];
         switch ($cat){
@@ -79,7 +82,7 @@ SQL;
         }
       }
       break;
-    case "getUser":
+    case "GETuser":
       $id_user = $_GET['id'];
       $query=<<<SQL
 SELECT user_name, user_age, id_rank, id_belt, id_activity
@@ -95,7 +98,7 @@ SQL;
         echo "$ans";
       }
       break;
-    case "updateInfo":
+    case "PUT":
       $user_id = $_GET['id'];
       $user_name = $_GET['user_name'];
       $user_age = $_GET['user_age'];
@@ -112,7 +115,9 @@ SQL;
         printf("{"res": 1, "msg": "200: OK"}");
       }
       break;
+    case "PATCH":
 
+      break;
     default:
       $msg = "ERROR 400: BAD REQUEST";
       printf("{"res": 0,"msg": $msg}");
