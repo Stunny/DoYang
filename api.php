@@ -34,7 +34,8 @@ WHERE id_activity = 0;
 SQL;
             $list = $conn->query($query);
             if($list->num_rows == 0){
-              printf("{"res": 0, "msg": "ERROR 404: NOT FOUND"}");
+              $ans = '{"result": 0, "msg": "ERROR 404: NOT FOUND"}';
+              echo $ans;
             }else{
               printf(json_encode($list->fetch_assoc()));
             }
@@ -47,7 +48,8 @@ WHERE id_activity = 1;
 SQL;
             $list = $conn->query($query);
             if($list->num_rows == 0){
-              printf("{"res": 0, "msg": "ERROR 404: NOT FOUND"}");
+              $ans = '{"res": 0, "msg": "ERROR 404: NOT FOUND"}';
+              echo $ans;
             }else{
               printf(json_encode($list->fetch_assoc()));
             }
@@ -60,13 +62,15 @@ WHERE id_activity = 2;
 SQL;
             $list = $conn->query($query);
             if($list->num_rows == 0){
-              printf("{"res": 0, "msg": "ERROR 404: NOT FOUND"}");
+              $ans = '{"res": 0, "msg": "ERROR 404: NOT FOUND"}';
+              echo $ans;
             }else{
               printf(json_encode($list->fetch_assoc()));
             }
             break;
           default:
-            printf("{"res": 0, "msg": "ERROR 400: BAD REQUEST"}");
+            $ans = '{"res": 0, "msg": "ERROR 400: BAD REQUEST"}';
+            echo $ans;
             break;
         }
       }else{
@@ -76,7 +80,8 @@ FROM usuario;
 SQL;
         $list = $conn->query($query);
         if($list->num_rows == 0){
-          printf("{"res": 0, "msg": "ERROR 404: NOT FOUND"}");
+          $ans = '{"res": 0, "msg": "ERROR 404: NOT FOUND"}';
+          echo $ans;
         }else{
           printf(json_encode($list->fetch_assoc()));
         }
@@ -92,7 +97,8 @@ SQL;
       $res = $conn->query($query);
       //echo $res;
       if($res->num_rows != 1){
-        printf("{"res": 0, "msg": "Error 403: FORBIDDEN"}");
+        $ans = '{"res": 0, "msg": "Error 403: FORBIDDEN"}';
+        echo $ans;
       }else{{
         $ans = json_encode($res->fetch_assoc());
         echo "$ans";
