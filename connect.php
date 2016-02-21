@@ -1,8 +1,8 @@
 <?php
 $username = "root";
 $servername = "localhost";
-$password = "admin";
-$database = "doyang_app";
+$password = "22clase0196";
+$database = "Doyang_App";
 
 $conn = new mysqli($servername, $username, $password, $database);
 

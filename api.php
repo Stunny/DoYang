@@ -99,7 +99,7 @@ SQL;
       if($res->num_rows != 1){
         $ans = '{"res": 0, "msg": "Error 403: FORBIDDEN"}';
         echo $ans;
-      }else{{
+      }else{
         $ans = json_encode($res->fetch_assoc());
         echo "$ans";
       }
@@ -116,9 +116,9 @@ WHERE id_user = $user_id;
 SQL;
       $res = $conn->query($query);
       if(!$res){
-        printf("{"res": 0, "msg": "ERROR 400: BAD REQUEST"}");
+        printf('{"res": 0, "msg": "ERROR 400: BAD REQUEST"}');
       }else{
-        printf("{"res": 1, "msg": "200: OK"}");
+        printf('{"res": 1, "msg": "200: OK"}');
       }
       break;
     case "PATCH":
@@ -126,7 +126,7 @@ SQL;
       break;
     default:
       $msg = "ERROR 400: BAD REQUEST";
-      printf("{"res": 0,"msg": $msg}");
+      printf('{"res": 0,"msg": $msg}');
       break;
   }
 
