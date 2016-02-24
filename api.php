@@ -1,15 +1,19 @@
 <?php
-  if(isset($_GET[''])){
+  if(isset($_SERVER['METHOD_REQUEST'])){
+    $method = $_SERVER['METHOD_REQUEST'];
+    switch($method){
+      case '':
 
-  }else if(isset($_POST[''])){
+        break;
+      case '':
 
-  }else if(isset($_PUT[''])){
+        break;
+      case'':
 
-  }else if(isset($_DELETE[''])){
+        break;
+      default:
 
-  }else if(isset($_PATCH[''])){
-
-  }else{
-
+        break;
+    }
   }
 ?>
